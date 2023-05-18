@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %} 顯示所有資料{% endblock %}
+{% block content %}
+<body>
+<br>
+<br>
+<br>	    
+        <h2>顯示studnt資料表所有資料</h2>
+        <table class = "table table-striped">
+            <thead>
+                <tr>
+                    <th>編號</th>
+                    <th>姓名</th>
+                    <th>學號</th>
+                    <th>性別</th>
+                    <th>生日</th>
+                    <th>地址</th>
+                    <th>電話</th>
+                    <th>電子郵件</th>
+                    <th>編輯</th>
+                    <th>刪除</th>
+                </tr>
+            </thead>
+            <tbody>    
+            {% for student in allStudents%}
+                <tr scope="row">
+                    <td>{{ student.id}}</td>
+                    <td>{{ student.stdName}}</td>
+                    <td>{{ student.stdId}}</td>
+                    <td>{{ student.stdSex}}</td>
+                    <td>{{ student.stdBirth}}</td>
+                    <td>{{ student.stdAddress}}</td>
+                    <td>{{ student.stdPhone}}</td>
+                    <td>{{ student.stdEmail}}</td>
+                    <td><button type="button" class = "btn btn-info" name="button1" id = "button" onclick ="location.href='/edit/{{student.stdId}}'" >編輯</button></td>
+                    <td><button type="button" class = "btn btn-danger" name="button2" id = "button" onclick ="location.href='/delet/{{student.stdId}}'" >刪除</button></td>
+                </tr>
+            {% endfor%}
+               
+            </tbody>   
+        </table>  
+        <tr scope="row">
+            <td><button type="button" class = "btn btn-outline-primary btn-lg btn-block" onclick ="location.href='/post1/'" >新增學生資料</button></td>
+        </tr>  
+</body>
+{% endblock %}
+

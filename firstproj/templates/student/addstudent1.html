@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %} 顯示所有資料{% endblock %}
+{% block content %}
+<h2> student 表單新增(一)</h2>
+
+<!--製作表單-->
+<form action="." method="POST" name = "form1">
+    {% csrf_token %}
+    <table class = "table table-dark">
+    <tr>
+        <th> 姓名</th><td><input type ="text" id = "stdName" name ="stdName"/></td>
+    </tr> 
+    <tr>
+        <th> 學號</th><td><input type ="text" id = "stdId" name ="stdId"/></td>
+    </tr>
+    <tr>
+        <th> 性別</th>
+        <td>
+            <input name = "stdSex" type = "radio" id ="stdSex1" value = "M" checked = "checked"/>
+            男生
+            <input name = "stdSex" type = "radio" id ="stdSex2" value = "F" />          
+            女生
+        </td>
+    </tr>  
+    <tr>
+        <th> 生日</th><td><input type ="date" id = "stdBirth" name ="stdBirth"/></td>
+    </tr>
+    <tr>
+        <th> 地址</th><td><input type ="text" id = "stdAddress" name ="stdAddress"/></td>
+    </tr>
+    <tr>
+        <th> 電話</th><td><input type ="text" id = "stdPhone" name ="stdPhone"/></td>
+    </tr>
+    <tr>
+        <th> 電子郵件</th><td><input type ="text" id = "stdEmail" name ="stdEmail"/></td>
+    </tr>
+    <tr>
+        <th colspan="2" align="center">
+        <input type="submit" name = "button" id = "button" value="送出">
+        <input type="reset" name = "button2" id = "button2" value="重設">
+    </tr>
+    </table>
+    <span style="color:red">{{mess}}</span>
+    <div> 接收資料：{{mess}}</div>
+</form>
+{% endblock %}

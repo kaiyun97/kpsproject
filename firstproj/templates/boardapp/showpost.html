@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}網站留言版{% endblock %}
+{% block content %}
+<div class="contentbox">
+	<table width="100%">
+		<tr>
+			<td>
+				<img src="{% static 'images/comment.png' %}" width="16" height="16" align="absmiddle" /> <a href="/addpost/">我要留言</a> 
+			</td>
+		</tr>
+  	{% for unit in boardunits %}
+	<tr>
+	  <td>
+		  <table width="545" border="0" align="center" cellpadding="0" cellspacing="0" background="{% static 'images/g_r5_c4.png' %}">
+		  	<tr>
+			  <td>
+				<div class="floorDiv">
+					{% if unit.bgender == "m" %}
+						<img src="{% static 'images/boy.png' %}" width="72" height="63" />
+					{% else %}
+						<img src="{% static 'images/girl.png' %}" width="72" height="63" />
+					{% endif %}
+				</div>
+				<div class="contentDiv">
+				  <p class="title">{{unit.btitle}}</p>
+				  <p></p>
+				  <p>{{unit.bcontent}}</p>
+				  {% if unit.bresponse != "" %}
+					<div class="responseDiv">
+					  <p><strong>版主回應</strong>：{{unit.bresponse}}</p>
+					</div>
+				  {% endif %}
+				  <p class="editor"><img src="{% static 'images/user.png' %}" width="16" height="16" align="absmiddle">{{unit.bname}}&nbsp; 
+					<img src="{% static 'images/date.png' %}" width="16" height="16" align="absmiddle">{{unit.btime}}&nbsp;
+					{% if unit.bemail != "" %}
+					  <a href="mailto:{{unit.bemail}}" target="_blank">
+					  <img src="{% static 'images/email.png' %}" width="16" height="16" border="0" align="absmiddle"></a>
+					{% endif %}
+					&nbsp;
+				  </p>
+				</div>
+			  </td>
+			</tr>
+			<tr>
+			  <td><img name="g_r7_c4" src="{% static 'images/g_r7_c4.png' %}" width="545" height="12" border="0" alt=""></td>
+			</tr>
+		  </table>
+		  <span class="functionDiv">
+			  <img src="{% static 'images/g_r9_c3.png' %}" width="600" height="20" border="0" />
+		  </span>
+		</td>
+	</tr>
+  	{% empty %}
+		<tr>
+		  <td background="{% static 'images/g_r3_c3.png' %}">
+			  <div class="messageDiv"><img src="{% static 'images/exclamation.png' %}" width="16" height="16" align="absmiddle"> 目前沒有新的資料，歡迎您留言。</div></td>
+		</tr>
+	{% endfor %}
+		<tr>
+			<td background="{% static 'images/g_r3_c3.png' %}">
+			  <div class="pagebutton">
+			  {% if currentpage > 1 %}
+				   <a href="/showpost/prev/" title="上一頁">
+				  <img src="{% static 'images/prevpage.png' %}" alt="上一頁" width="64" height="24" /></a>
+			  {% endif %}
+			  {% if currentpage < totpage %}
+				  <a href="/showpost/next/" title="下一頁">
+				  <img src="{% static 'images/nextpage.png' %}" alt="下一頁" width="64" height="24" /></a>
+			  {% endif %}
+			  </div>
+			</td>
+		</tr>
+		<tr>
+			<td background="{% static 'images/g_r3_c3.png' %}">
+		</tr>
+	</table>
+</div>
+{% endblock %}
