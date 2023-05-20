@@ -1,0 +1,10 @@
+Django
+django-allauth
+django-widget-tweaks
+Pillow
+django-simple-captcha
+numpy
+pandas
+matplotlib
+notebook
+psycopg2

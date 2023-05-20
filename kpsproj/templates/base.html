@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    
+    <div id="sidebar">
+        {% block sidebar %}
+        <ul>
+            <li><a href="/">首頁</a></li>
+            <li><a href="/blog/">Blog</a></li>
+        </ul>
+        {% endblock %}
+    </div>
+    <!-- 新增導覽列-->
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top ">
+      <a class="navbar-brand" href="/">
+      <img src = "/static/images/cat.jfif" width="30" height="30" class="d-inline-block align-top" alt="">  
+      莘莘學「職」
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/hello/">首頁 <span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              最新消息
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href=""></a>
+              <a class="dropdown-item" href=""></a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              職業種類
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/Stype/">助人者</a>
+              <a class="dropdown-item" href="/Ctype/">組織者</a>
+              <a class="dropdown-item" href="/Rtype/">實踐者</a>
+              <a class="dropdown-item" href="/Etype/">影響者</a>
+              <a class="dropdown-item" href="/Itype/">思考者</a>
+              <a class="dropdown-item" href="/Atype/">創造者</a> 
+            </div>  
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              影片
+            </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/post/"></a>
+            <a class="dropdown-item" href="/post1/"></a>
+            <a class="dropdown-item" href="/postform/"></a>
+
+          </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              常見問題
+            </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/delete/11111/"></a>
+            <a class="dropdown-item" href="/edit/11111"></a>
+          </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/group/" role="button" data-toggle="" aria-expanded="false">團隊介紹</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link disabled" href="">聯絡我們</a>
+          </li>        
+
+    </nav>
+
+    <main role="main" class="container">
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+    </main><!-- /.container -->
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper)直接css套用已開程式 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>
