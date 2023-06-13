@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %} hello {% endblock %}
+{% block content %}
+
+<main class="mt-2">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<h1>聯絡我們</h1>
+			</div>
+		</div>
+		<div class="row mb-2">
+			<div class="col">
+				<form method="post">
+					{% csrf_token %}
+					{{ form.as_p }}
+					<button type="submit" class="btn btn-primary">送出</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</main>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %} hello {% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+    <head>
+        <title>聯絡我們</title>
+    </head>
+    <body>
+        <p>
+            {{ message }}
+        </p>
+        <p>
+            <div>姓名: {{ name }}</div>
+            <div>電話: {{ phone_number }}</div>
+            <div>信箱: {{ email_address }}</div>
+        </p>
+    </body>
+</html>
+{% endblock %}

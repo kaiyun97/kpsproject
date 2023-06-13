@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+{% block title %} hello {% endblock %}
+{% block content %}
+
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="bootstrap,bootstrap accordion,accordion with arrow">
+    <meta name="author" content="start templates Development">
+    <title>Bootstrap Accordion</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet"> 
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a class="first" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <h2>不知道自己適合什麼工作怎麼辦？如何找到適合的工作？</h2>
+                                <span></span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <p><h3>1. 了解你的性格</h3>
+								
+								香港作詞人林夕說：「了解自己是最難的！」的確，我們通常只會在遇到重大抉擇與人生轉折點時，才有機會認識自己。但是重大事件並不常有，我們也不希望重大事件常常發生。
+我們可以透過心理測驗的外力協助，客觀分析你的個性與天賦。我透過這三個心理測驗，確認自己是內向、重視細節和系統化的人，對我的人生決策幫助很多，你也可以試試看。
+								<h3>2. 觀察你的喜好</h3>
+								觀察自己，就像為自己的個性畫素描，觀察哪些事讓自己感到開心、成就，哪些事讓我們討厭、生氣，就能逐漸描繪出自己的性格樣貌。不過，性格看不到也摸不到，要怎麼觀察？
+
+答案是用寫的。就像飲食控制，一旦開始記錄熱量，就會開始注意吃了什麼、吃了多少。當你開始紀錄生活，就會開始收集素材：
+
+當一項工作開始時，你會先從哪一件事開始做？
+有什麼事情會讓自己忘記時間、忘記上廁所？
+空閒時，在沒人督促的狀況下，我會主動去做什麼事？
+身邊有沒有景仰的人？他都做些什麼事？
+								<h3>3. 設定你的人生目標</h3>
+								設定人生目標，和適合的工作有什麼關係？
+
+《找到你的為什麼》作者 Simon Sinek 曾在飛機上遇到一位乘客 Steve，Steve 對自己任職的高品質鋼鐵公司充滿熱情，熱愛到隨便搭訕一同搭機的 Simon 大談鋼鐵，卻說不出來為什麼他這麼熱愛工作。
+
+航程中，作者 Simon 抽絲剝繭的審問，才找到 Steve 熱愛工作的原因：Steve 是一位極重視環境保護的人，而鋼鐵公司的理念：減少原料消耗、降低資源浪費，正好和 Steve 的核心目標不謀而合，這就是為什麼 Steve 這麼這份熱愛工作的原因。
+
+如果企業的目標和你的人生目標方向相反，前進的力量就會互相抵銷，讓你覺得無力；相反的，如果企業目標和你人生目標方向相同，就能讓你的工作開始有意義。
+							</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								<h2>什麼工作不會被取代？   </h2>                             <span> </span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <p><h3>我們可以非常確定的是：</h3>
+								<h3>第一，人工智慧沒有辦法取代任何面向人類的工作，包括服務業、業務、心理治療、諮商、人資等，社交性愈強的工作，人工智慧愈是無法取代，但可以提供協助。</h3>
+								<h3>第二，跟社會有關的，不管是策略管理、創意、心理、政治、廣告、法律、經濟等，只要跟人有關的議題，基本上都不是「最佳化」的問題，就不是人工智慧可以幫忙的。</h3>
+                                   </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed last" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+								<h2>什麼工作在未來最容易消失？</h2>                                <span> </span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            <p><h3>1.廣告銷售人員（54％）</h3>
+								隨著廣告從印刷媒體、電視媒體轉向網路和社群媒體，人們已經不再需要透過傳統的平台發布廣告，這也意味著廣告銷售人員會在未來消失。畢竟，愈來愈多的業者選擇透過方便又快速的「應用程式介面」（application programming interface, API）刊登廣告，這個趨勢反應在式微的廣告產業中。
+								<h3>2.IT專員（65％）</h3>
+								專家預估，雖然到2024年，企業對於IT專員的需求相對提升12％，但隨著更遠的未來，網際網路上的內容不斷增加，許多單位將依靠機器人和自動化方式來解決員工和客戶的問題。
+								<h3>3.校對人員（84％）</h3>
+								當今社會上的主流趨勢，漸漸已讓校正軟體成了一個標準工具，相關文字工作者也愈來愈頻繁的使用它，包含檢查文法、錯字、語意等，雖然目前尚有許多功能待改進、也有許多不靈敏的地方，但隨著人們上傳的檔案愈多、分析的文字愈全面，校對軟體其實是不斷在這過程中吸收大數據資訊，未來需要的專業校對人員就更少了。
+								<h3>4.零售收銀人員（92％）</h3>
+								隨著各大賣場自助結帳的功能日漸普及，專家預估，未來零售收銀人員會愈來愈少──因為自助結帳方便、快速的特性，使得企業可以減少非必要的人事成本，加上電商的發達，收銀員這項職業將面臨巨大挑戰。
+								<h3>5.快遞人員（94％）</h3>
+								雖然目前快遞、外送等物流人員是疫情下非常火熱的職業，但專家依然認為，隨著未來無人機和機器人的普及，快遞人員終有一天將被取代。不過這真正要發生的時日真的還早，因為預估到2024年，物流業的快遞員需求還會成長5％。
+								<h3>6.櫃台接待人員（96％）</h3>
+								隨著自助報到、接待系統的自動化服務漸漸普及，傳統接待員的角色也愈來愈不那麼重要，這些變化在高科技公司裡特別明顯，因為接待員能處理的工作，人工智慧也能完成。
+								<h3>7.保險從業經理人（96％）</h3>
+								由於機器分類、分析、歸納數據的便捷，相關的從業人員將變得非常不必要，因為許多保險數據都被量化統計，傳統業務也透過雲端系統就能完成。
+								<h3>8.會計師（98％）</h3>
+								專家估計，到了2024年，會計從業人員將會下降8％，因為隨著各類型的會計軟體研發，系統不僅不會出錯，費用也比人工便宜，未來若逐漸普及，幫各大企業算帳的會計公司也可能將逐漸減少。
+							</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed last" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <h2>一直換工作會怎樣嗎？ </h2>                               <span> </span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            <p><h3>1.注意履歷中太長的空白期間</h3>
+                                達斯表示，如果都沒有空白期，雇主會認為跳槽是好事，代表你在市場上炙手可熱。若有更高的薪資和更好的職缺，跳槽是人之常情。但若有很長的空白期，代表這個人可能習慣用離職逃避困難工作。
+                                <h3> 2.太常跳槽可能扣分</h3>
+                                琪茉曼表示，假如離職原因是職場環境很糟糕，一般來說她不會因為求職者太快離職而扣分。
+                                但是如果這種情形太頻繁，面試官可能會懷疑你判斷力真的有問題，或者你跳槽總是別有動機。若只有1、2次，琪茉曼會善意假設你說是事實，至少給你個機會聊聊真實狀況。但假如你連續不斷因這個原因跳槽，就會扣分，很難挽回。
+                                <h3>3.跳槽不是長遠之計</h3>
+                                職涯教練傑伊（Chelsea Jay）補充：「我總是建議求職者先決定你想要什麼，因為跳槽無法持久，你過陣子會厭倦一直換來換去。」
+                                她希望專業人士能夠利用跳槽進行自我反思與自我發現，安頓在一份工作2到5年。「很多時候，我發現專業人士還不曉得過去沒找到的是什麼，以及未來想要的是什麼。花點時間坐下來寫清單，釐清工作提供什麼能夠讓你快樂、留下來。」
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <!--footer-->
+ <div class="footer text-center">
+    <p class="text-white">Design by <a href="/">回首頁</a>
+    </p>
+</div>
+    <!--//footer-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script type="text/javascript"  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
+{% endblock %}
