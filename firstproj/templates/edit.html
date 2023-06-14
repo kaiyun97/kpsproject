@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %} 顯示所有資料{% endblock %}
+{% block content %}
+
+<h2>student資料表編輯</h2>
+<form action="/edit/{{unit.stdId}}/edit" method="GET" name = "form1">
+    {% csrf_token %}
+    <table class = "table table-dark" >
+        <tr>
+            <th>性名</th><td><input type ="test" id="stdName" name="stdName" value={{unit.stdName}}></td>
+        </tr>
+        <tr>
+            <th>學號</th><td><input type ="test" id="stdId" name="stdId" value={{unit.stdId}}></td>
+        </tr>
+        <tr>
+            <th>性別</th>
+            {% if unit.stdSex == "M" %}
+            <td>
+                <input type ="radio" id="stdSex1" name="stdSex" value="M" checked="checked"></td>
+                男生
+                <input type ="radio" id="stdSex2" name="stdSex" value="F" checked="checked"></td>
+                女生
+            {% else %}
+                <input type ="radio" id="stdSex1" name="stdSex" value="M" checked="checked"></td>
+                男生
+                <input type ="radio" id="stdSex2" name="stdSex" value="F" checked="checked"></td>
+                女生
+            {% endif %}
+        </tr>
+        <tr>
+            <th>生日</th><td><input type ="test" id="stdBirth" name="stdBirth" value={{unit.stdBirth}}></td>
+        </tr>
+        <tr>
+            <th>地址</th><td><input type ="test" id="stdAddress" name="stdAddress" value={{unit.stdAddress}}></td>
+        </tr>
+        <tr>
+            <th>電話</th><td><input type ="test" id="stdPhone" name="stdPhone" value={{unit.stdPhone}}></td>
+        </tr>
+        <tr>
+            <th>電子郵件</th><td><input type ="test" id="stdEmail" name="stdEmail" value={{unit.stdEmail}}></td>
+        </tr>
+        <tr>
+            <th colspan="2">
+            <button type="submit" class = "btn btn-primary" name="button" id = "button" >送出</button>
+            <button type="reset" class = "btn btn-primary" name="button2" id = "button" >送出</button>
+        </tr>
+    </table>
+    <span style="color:red"> {{mess}} </span>
+</form>
+{% endblock %}

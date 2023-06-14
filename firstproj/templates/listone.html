@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %} 顯示一筆資料{% endblock %}
+{% block content %}
+    <body>
+	    <h2 >顯示studnt 資料表一筆資料	</h2>
+        編號:{{unit.id}} <br/>
+        姓名:{{unit.stdName}} <br/>
+        學號:{{unit.stdId}} <br/>
+        性別:{{unit.stdSex}} <br/>
+        生日:{{unit.stdBirth}} <br/>
+        地址:{{unit.stdAdress}} <br/>
+        電話:{{unit.stdPhone}} <br/>
+        電子郵件:{{unit.Email}} <br/>
+    <body>
+{% endblock %}
