@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %} 顯示所有資料{% endblock %}
+{% block content %}
+
+<h2>student資料表刪除</h2>
+<form action="." method="POST" name = "form1">
+    {% csrf_token %}
+    <table class = "table" >
+    <div >輸入編號：<input type="text" name="stdId"/></div>
+    </div><input type="submit" id="button" value= "確認刪除"/></div>
+
+    <span style="color:red"> {{mess}} </span>
+    </table>
+    </form>
+{% endblock %}
